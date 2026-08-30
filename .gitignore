@@ -1,0 +1,8 @@
+# 送らないファイル
+../portfolioDbData.php
+
+# 自動生成いらないファイル
+.DS_Store
+Thumbs.db
+.vscode/
+node_modules/

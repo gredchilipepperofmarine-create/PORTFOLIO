@@ -129,7 +129,7 @@ const getLang = (targetRepo, targetLang, targetLangDetail) => {
 getLang('STG', 'STGLang', 'STGLangDetail');
 getLang('HowToDrive', 'HowToDriveLang', 'HowToDriveLangDetail');
 getLang('RPG', 'RPGLang', 'RPGLangDetail');
-getLang('DesighHouseRenovation', 'DesighHouseRenovationLang', 'DesighHouseRenovationLangDetail');
+getLang('DesignHouseRenovation', 'DesignHouseRenovationLang', 'DesignHouseRenovationLangDetail');
 getLang('Movie', 'MovieLang', 'MovieLangDetail');
 getLang('ccdonuts', 'ccdonutsLang', 'ccdonutsLangDetail');
 

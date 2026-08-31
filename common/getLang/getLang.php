@@ -186,7 +186,7 @@
                 <img src="images/GitHub_Invertocat_Black.png" alt="GitHub Logo" style="height: 20px; width: auto;">
                 <span class="fw-bold">コードを見る</span>
               </a>
-              <a href="http://www.gredchilipepper.shop/creates/shooting/index.php" target="_blank" class="btn btn-primary rounded-3 px-3 py-2 flex-fill d-inline-flex align-items-center justify-content-center">
+              <a href="http://www.gredchilipepper.shop/creates/STG/index.php" target="_blank" class="btn btn-primary rounded-3 px-3 py-2 flex-fill d-inline-flex align-items-center justify-content-center">
                 作品をプレイする
               </a>
               <button type="button" class="btn btn-secondary rounded-3 px-3 py-2 flex-fill" data-bs-dismiss="modal">

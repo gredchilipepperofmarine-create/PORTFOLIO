@@ -10,7 +10,9 @@
           </span>
         </div>
         <p class="lh-sm mb-0 text-start">
+          <strong>
           GitHub API連携でリポジトリ内の言語使用率(バイト数)を自動計算し、プログレスバー(作品詳細内)で表示。表示崩れ防止のため2重の対策を行っています。
+          </strong>
           <br>1.通信エラーの場合にはローカルストレージから情報を取得
           <br>2.タイムスタンプ機能を利用して最初の通信から24時間以内はローカルストレージから情報を取得
         </p>
@@ -24,7 +26,7 @@
               <span class="badge bg-secondary-subtle text-secondary-emphasis fs-6 py-2 px-3 fw-semibold mb-3">Game</span>
               <h5 class="card-title fw-bold text-dark mb-3">RPG Battle System</h5>
               <p>使用言語</p>
-              <div id="RPGLang" class="langCharaArea"></div>
+              <div id="RPGLangDetail" class="barCharaArea"></div>
             </div>
           </button>
         </div>
@@ -39,7 +41,7 @@
               <span class="badge bg-secondary-subtle text-secondary-emphasis fs-6 py-2 px-3 fw-semibold mb-3">Game</span>
               <h5 class="card-title fw-bold text-dark mb-3">Shooting Game</h5>
               <p>使用言語</p>
-              <div id="STGLang" class="langCharaArea"></div>
+              <div id="STGLangDetail" class="barCharaArea"></div>
             </div>
           </button>
         </div>
@@ -54,7 +56,7 @@
               <span class="badge bg-info-subtle text-info-emphasis fs-6 py-2 px-3 fw-semibold mb-3">デモHP</span>
               <h5 class="card-title fw-bold text-dark mb-3">How To Drive? (デモ)</h5>
               <p>使用言語</p>
-              <div id="HowToDriveLang" class="langCharaArea"></div>
+              <div id="HowToDriveLangDetail" class="barCharaArea"></div>
             </div>
           </button>
         </div>
@@ -69,7 +71,7 @@
               <span class="badge bg-info-subtle text-info-emphasis fs-6 py-2 px-3 fw-semibold mb-3">デモHP</span>
               <h5 class="card-title fw-bold text-dark mb-3">新作映画 (デモ)</h5>
               <p>使用言語</p>
-              <div id="MovieLang" class="langCharaArea"></div>
+              <div id="MovieLangDetail" class="barCharaArea"></div>
             </div>
           </button>
         </div>
@@ -84,7 +86,7 @@
               <span class="badge bg-info-subtle text-info-emphasis fs-6 py-2 px-3 fw-semibold mb-3">デモHP</span>
               <h5 class="card-title fw-bold text-dark mb-3">HTML/CSS個人製作課題</h5>
               <p>使用言語</p>
-              <div id="DesighHouseRenovationLang" class="langCharaArea"></div>
+              <div id="DesignHouseRenovationLangDetail" class="barCharaArea"></div>
             </div>
           </button>
         </div>
@@ -99,7 +101,7 @@
               <span class="badge bg-info-subtle text-info-emphasis fs-6 py-2 px-3 fw-semibold mb-3">デモHP</span>
               <h5 class="card-title fw-bold text-dark mb-3">PHP個人製作課題 (C.C.Donuts)</h5>
               <p>使用言語</p>
-              <div id="ccdonutsLang" class="langCharaArea"></div>
+              <div id="ccdonutsLangDetail" class="barCharaArea"></div>
             </div>
           </button>
         </div>
@@ -119,30 +121,36 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body p-4">
-        <div class="row g-4 align-items-center">
+        <div class="row g-4 align-items-start">
           <div class="col-12 col-md-5">
             <img src="images/battle.png" class="img-fluid rounded-3 w-100 shadow-sm" alt="RPG" onerror="this.src='https://placehold.co/600x350/e2e8f0/475569?text=RPG+Battle+System'">
             <div id="RPG" class="languageBar mt-2 mb-2"></div>
-            <div id="RPGLangDetail" class="barCharaArea"></div>
+            <div id="RPGLang" class="langCharaArea row row-cols-2 g-2 m-0"></div>
           </div>
-          <div class="col-12 col-md-7">
-            <p class="mb-2"><strong>制作時間：</strong> 10~20h</p>
-            <p class="mb-2"><strong>対応端末：</strong> ※PCのみ動作</p>
-            <p class="mb-2"><strong>ゲーム内容：</strong> マップを歩き回るとモンスターと遭遇してバトルを開始します。</p>
-            <p class="mb-2"><strong>工夫した点・こだわり【要差し替え】：</strong><br>
-              <span class="text-danger fw-bold">★★★ 【FIXME: ここに工夫点を記述】 例: キャラクターの移動判定ロジックとエンカウント確率の調整にこだわりました。 ★★★</span>
-            </p>
+          <div class="col-12 col-md-7 d-flex flex-column justify-content-between">
+            <div>
+              <p class="mb-2"><strong>制作時間：</strong> 25h</p>
+              <p class="mb-2"><strong>対応端末：</strong> ※PCのみ動作</p>
+              <p class="mb-2"><strong>制作概要：</strong> Javascript演習開始直後の自主制作ゲーム1。エンカウントと戦闘ロジックを実装 <small class="text-muted"><br>※制作補助としてAIを使用</small><br><small class="text-muted">※戦闘画面はAIでデザイン</small></p>
+              <p class="mb-2"><strong>工夫した点：</strong><br>
+                <span class="text-danger fw-bold">戦闘画面を基礎的なJavascriptで記述後、STGのロジックを応用してキャラクターの移動とエンカウント判定に使用</span>
+              </p>
+            </div>
             <hr class="my-3">
-            <p class="mb-1"><strong>GitHubリンク【要差し替え】：</strong></p>
-            <a href="https://github.com/FIXME_YOUR_ACCOUNT/FIXME_REPO" target="_blank" class="text-break text-danger fw-bold">
-              ★★★ https://github.com/FIXME_YOUR_ACCOUNT/FIXME_REPO ★★★
-            </a>
+            <div class="d-flex flex-column flex-sm-row flex-md-column flex-lg-row gap-2">
+              <a href="https://github.com/gredchilipepperofmarine-create/RPG.git" target="_blank" rel="noopener noreferrer" class="btn btn-light border shadow-sm d-inline-flex align-items-center justify-content-center gap-2 rounded-3 px-3 py-2 flex-fill text-dark text-decoration-none">
+                <img src="images/GitHub_Invertocat_Black.png" alt="GitHub Logo" style="height: 20px; width: auto;">
+                <span class="fw-bold">コードを見る</span>
+              </a>
+              <a href="../RPG/RPG/index.html" target="_blank" class="btn btn-primary rounded-3 px-3 py-2 flex-fill d-inline-flex align-items-center justify-content-center">
+                作品をプレイする
+              </a>
+              <button type="button" class="btn btn-secondary rounded-3 px-3 py-2 flex-fill" data-bs-dismiss="modal">
+                閉じる
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="modal-footer border-top-0 pt-0">
-        <a href="../RPG/RPG/index.html" target="_blank" class="btn btn-primary rounded-3 px-4">作品をプレイする</a>
-        <button type="button" class="btn btn-secondary rounded-3" data-bs-dismiss="modal">閉じる</button>
       </div>
     </div>
   </div>
@@ -157,31 +165,36 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body p-4">
-        <div class="row g-4 align-items-center">
+        <div class="row g-4 align-items-start">
           <div class="col-12 col-md-5">
-            <!-- 画像下に mb-3 を付与して下部要素との隙間を確保 -->
-            <img src="images/shooting.png" class="img-fluid rounded-3 w-100 shadow-sm mb-3" alt="Shooting" onerror="this.src='https://placehold.co/600x350/e2e8f0/475569?text=Shooting+Game'">
+            <img src="images/shooting.png" class="img-fluid rounded-3 w-100 shadow-sm" alt="Shooting" onerror="this.src='https://placehold.co/600x350/e2e8f0/475569?text=Shooting+Game'">
             <div id="STG" class="languageBar mt-2 mb-2"></div>
-            <div id="STGLangDetail" class="barCharaArea"></div>
+            <div id="STGLang" class="langCharaArea row row-cols-2 m-0"></div>
           </div>
-          <div class="col-12 col-md-7">
-            <p class="mb-2"><strong>制作時間：</strong> 7h</p>
-            <p class="mb-2"><strong>対応端末：</strong> ※PCのみ動作</p>
-            <p class="mb-2"><strong>ゲーム内容：</strong> 敵を撃破して最高記録を目指すシューティングゲーム。</p>
-            <p class="mb-2"><strong>工夫した点・こだわり【要差し替え】：</strong><br>
-              <span class="text-danger fw-bold">★★★ 【FIXME: ここに工夫点を記述】 例: Canvasを用いた描画処理の軽量化と、スコア保持ロジックを実装。 ★★★</span>
-            </p>
+          <div class="col-12 col-md-7 d-flex flex-column justify-content-between">
+            <div>
+              <p class="mb-2"><strong>制作時間：</strong> 20h</p>
+              <p class="mb-2"><strong>対応端末：</strong> ※PCのみ動作</p>
+              <p class="mb-2"><strong>制作概要：</strong> Javascript演習開始直後の自主制作ゲーム2 <br><small class="text-muted">※制作補助としてAIを使用</small></p>
+              <p class="mb-2"><strong>工夫した点：</strong><br>
+                <span class="text-danger fw-bold">Canvasを用いた描画処理の軽量化と、PHP演習後にスコア保持ロジックを実装</span>
+              </p>
+            </div>
             <hr class="my-3">
-            <p class="mb-1"><strong>GitHubリンク【要差し替え】：</strong></p>
-            <a href="https://github.com/FIXME_YOUR_ACCOUNT/FIXME_REPO" target="_blank" class="text-break text-danger fw-bold">
-              ★★★ https://github.com/FIXME_YOUR_ACCOUNT/FIXME_REPO ★★★
-            </a>
+            <div class="d-flex flex-column flex-sm-row flex-md-column flex-lg-row gap-2">
+              <a href="https://github.com/gredchilipepperofmarine-create/STG.git" target="_blank" rel="noopener noreferrer" class="btn btn-light border shadow-sm d-inline-flex align-items-center justify-content-center gap-2 rounded-3 px-3 py-2 flex-fill text-dark text-decoration-none">
+                <img src="images/GitHub_Invertocat_Black.png" alt="GitHub Logo" style="height: 20px; width: auto;">
+                <span class="fw-bold">コードを見る</span>
+              </a>
+              <a href="http://www.gredchilipepper.shop/creates/shooting/index.php" target="_blank" class="btn btn-primary rounded-3 px-3 py-2 flex-fill d-inline-flex align-items-center justify-content-center">
+                作品をプレイする
+              </a>
+              <button type="button" class="btn btn-secondary rounded-3 px-3 py-2 flex-fill" data-bs-dismiss="modal">
+                閉じる
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="modal-footer border-top-0 pt-0">
-        <a href="http://www.gredchilipepper.shop/creates/shooting/index.php" target="_blank" class="btn btn-primary rounded-3 px-4">作品をプレイする</a>
-        <button type="button" class="btn btn-secondary rounded-3" data-bs-dismiss="modal">閉じる</button>
       </div>
     </div>
   </div>
@@ -196,29 +209,35 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body p-4">
-        <div class="row g-4 align-items-center">
+        <div class="row g-4 align-items-start">
           <div class="col-12 col-md-5">
             <img src="images/howToDrive.png" class="img-fluid rounded-3 w-100 shadow-sm" alt="How To Drive" onerror="this.src='https://placehold.co/600x350/e0f2fe/0369a1?text=How+To+Drive%3F'">
             <div id="HowToDrive" class="languageBar mt-2 mb-2"></div>
-            <div id="HowToDriveLangDetail" class="barCharaArea"></div>
+            <div id="HowToDriveLang" class="langCharaArea row row-cols-2 g-2 m-0"></div>
           </div>
-          <div class="col-12 col-md-7">
-            <p class="mb-2"><strong>制作時期：</strong> 訓練開始直後に作成</p>
-            <p class="mb-2"><strong>対応端末：</strong> レスポンシブ未対応</p>
-            <p class="mb-2"><strong>工夫した点・こだわり【要差し替え】：</strong><br>
-              <span class="text-danger fw-bold">★★★ 【FIXME: ここに工夫点を記述】 例: Web制作学習の初期段階で、基本タグのレイアウト検証用に制作。 ★★★</span>
-            </p>
+          <div class="col-12 col-md-7 d-flex flex-column justify-content-between">
+            <div>
+              <p class="mb-2"><strong>制作期間：</strong> 15時間</p>
+              <p class="mb-2"><strong>制作概要：</strong> 演習開始直後の自主制作サイト <small class="text-muted">※レスポンシブ未対応</small></p>
+              <p class="mb-2"><strong>工夫した点：</strong><br>
+                <span class="text-danger fw-bold">Web制作学習の初期段階で、基本タグのレイアウト検証用に制作</span>
+              </p>
+            </div>
             <hr class="my-3">
-            <p class="mb-1"><strong>GitHubリンク【要差し替え】：</strong></p>
-            <a href="https://github.com/FIXME_YOUR_ACCOUNT/FIXME_REPO" target="_blank" class="text-break text-danger fw-bold">
-              ★★★ https://github.com/FIXME_YOUR_ACCOUNT/FIXME_REPO ★★★
-            </a>
+            <div class="d-flex flex-column flex-sm-row flex-md-column flex-lg-row gap-2">
+              <a href="https://github.com/gredchilipepperofmarine-create/HowToDrive.git" target="_blank" rel="noopener noreferrer" class="btn btn-light border shadow-sm d-inline-flex align-items-center justify-content-center gap-2 rounded-3 px-3 py-2 flex-fill text-dark text-decoration-none">
+                <img src="images/GitHub_Invertocat_Black.png" alt="GitHub Logo" style="height: 20px; width: auto;">
+                <span class="fw-bold">コードを見る</span>
+              </a>
+              <a href="../howtodrive/index.html" target="_blank" class="btn btn-primary rounded-3 px-3 py-2 flex-fill d-inline-flex align-items-center justify-content-center">
+                サイトを見る
+              </a>
+              <button type="button" class="btn btn-secondary rounded-3 px-3 py-2 flex-fill" data-bs-dismiss="modal">
+                閉じる
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="modal-footer border-top-0 pt-0">
-        <a href="../howtodrive/index.html" target="_blank" class="btn btn-primary rounded-3 px-4">デモサイトを見る</a>
-        <button type="button" class="btn btn-secondary rounded-3" data-bs-dismiss="modal">閉じる</button>
       </div>
     </div>
   </div>
@@ -233,29 +252,35 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body p-4">
-        <div class="row g-4 align-items-center">
+        <div class="row g-4 align-items-start">
           <div class="col-12 col-md-5">
             <img src="images/movie.png" class="img-fluid rounded-3 w-100 shadow-sm" alt="Movie" onerror="this.src='https://placehold.co/600x350/e0f2fe/0369a1?text=新作映画+(デモ)'">
             <div id="Movie" class="languageBar mt-2 mb-2"></div>
-            <div id="MovieLangDetail" class="barCharaArea"></div>
+            <div id="MovieLang" class="langCharaArea row row-cols-2 g-2 m-0"></div>
           </div>
-          <div class="col-12 col-md-7">
-            <p class="mb-2"><strong>制作時期：</strong> 訓練中期に作成</p>
-            <p class="mb-2"><strong>対応端末：</strong> レスポンシブ未対応</p>
-            <p class="mb-2"><strong>工夫した点・こだわり【要差し替え】：</strong><br>
-              <span class="text-danger fw-bold">★★★ 【FIXME: ここに工夫点を記述】 例: 映画告知風のデザイン表現と、CSS装飾の練習として制作。 ★★★</span>
-            </p>
+          <div class="col-12 col-md-7 d-flex flex-column justify-content-between">
+            <div>
+              <p class="mb-2"><strong>制作期間：</strong> 15時間</p>
+              <p class="mb-2"><strong>制作概要：</strong> 演習初期の自主制作サイト <small class="text-muted">※レスポンシブ未対応</small></p>
+              <p class="mb-2"><strong>工夫した点：</strong><br>
+                <span class="text-danger fw-bold">映画告知風のデザインと内容を0から作成。CSS装飾の練習として制作</span>
+              </p>
+            </div>
             <hr class="my-3">
-            <p class="mb-1"><strong>GitHubリンク【要差し替え】：</strong></p>
-            <a href="https://github.com/FIXME_YOUR_ACCOUNT/FIXME_REPO" target="_blank" class="text-break text-danger fw-bold">
-              ★★★ https://github.com/FIXME_YOUR_ACCOUNT/FIXME_REPO ★★★
-            </a>
+            <div class="d-flex flex-column flex-sm-row flex-md-column flex-lg-row gap-2">
+              <a href="https://github.com/gredchilipepperofmarine-create/Movie.git" target="_blank" rel="noopener noreferrer" class="btn btn-light border shadow-sm d-inline-flex align-items-center justify-content-center gap-2 rounded-3 px-3 py-2 flex-fill text-dark text-decoration-none">
+                <img src="images/GitHub_Invertocat_Black.png" alt="GitHub Logo" style="height: 20px; width: auto;">
+                <span class="fw-bold">コードを見る</span>
+              </a>
+              <a href="../movie/index.html" target="_blank" class="btn btn-primary rounded-3 px-3 py-2 flex-fill d-inline-flex align-items-center justify-content-center">
+                サイトを見る
+              </a>
+              <button type="button" class="btn btn-secondary rounded-3 px-3 py-2 flex-fill" data-bs-dismiss="modal">
+                閉じる
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="modal-footer border-top-0 pt-0">
-        <a href="../movie/index.html" target="_blank" class="btn btn-primary rounded-3 px-4">デモサイトを見る</a>
-        <button type="button" class="btn btn-secondary rounded-3" data-bs-dismiss="modal">閉じる</button>
       </div>
     </div>
   </div>
@@ -270,29 +295,35 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body p-4">
-        <div class="row g-4 align-items-center">
+        <div class="row g-4 align-items-start">
           <div class="col-12 col-md-5">
             <img src="images/lesson.png" class="img-fluid rounded-3 w-100 shadow-sm" alt="Lesson" onerror="this.src='https://placehold.co/600x350/e0f2fe/0369a1?text=HTML%2FCSS個人製作'">
-            <div id="DesighHouseRenovation" class="languageBar mt-2 mb-2"></div>
-            <div id="DesighHouseRenovationLangDetail" class="barCharaArea"></div>
+            <div id="DesignHouseRenovation" class="languageBar mt-2 mb-2"></div>
+            <div id="DesignHouseRenovationLang" class="langCharaArea row row-cols-2 g-2 m-0"></div>
           </div>
-          <div class="col-12 col-md-7">
-            <p class="mb-2"><strong>区分：</strong> HTML/CSS修了課題</p>
-            <p class="mb-2"><strong>対応端末：</strong> レスポンシブ対応済</p>
-            <p class="mb-2"><strong>工夫した点・こだわり【要差し替え】：</strong><br>
-              <span class="text-danger fw-bold">★★★ 【FIXME: ここに工夫点を記述】 例: Flexbox/Gridを用いたレスポンシブ配置とピクセーパーフェクトな再現。 ★★★</span>
-            </p>
+          <div class="col-12 col-md-7 d-flex flex-column justify-content-between">
+            <div>
+              <p class="mb-2"><strong>制作期間：</strong> 50時間</p>
+              <p class="mb-2"><strong>制作概要：</strong> 架空のリフォーム施工業者サイト</p>
+              <p class="mb-2"><strong>工夫した点・こだわり：</strong><br>
+                <span class="text-danger fw-bold">Flexbox/Gridを用いたレスポンシブ配置と、カンプファイルに忠実なデザインの再現</span>
+              </p>
+            </div>
             <hr class="my-3">
-            <p class="mb-1"><strong>GitHubリンク【要差し替え】：</strong></p>
-            <a href="https://github.com/FIXME_YOUR_ACCOUNT/FIXME_REPO" target="_blank" class="text-break text-danger fw-bold">
-              ★★★ https://github.com/FIXME_YOUR_ACCOUNT/FIXME_REPO ★★★
-            </a>
+            <div class="d-flex flex-column flex-sm-row flex-md-column flex-lg-row gap-2">
+              <a href="https://github.com/gredchilipepperofmarine-create/DesighHouseRenovation.git" target="_blank" rel="noopener noreferrer" class="btn btn-light border shadow-sm d-inline-flex align-items-center justify-content-center gap-2 rounded-3 px-3 py-2 flex-fill text-dark text-decoration-none">
+                <img src="images/GitHub_Invertocat_Black.png" alt="GitHub Logo" style="height: 20px; width: auto;">
+                <span class="fw-bold">コードを見る</span>
+              </a>
+              <a href="../DesignHouseRenovation/index.html" target="_blank" class="btn btn-primary rounded-3 px-3 py-2 flex-fill d-inline-flex align-items-center justify-content-center">
+                サイトを見る
+              </a>
+              <button type="button" class="btn btn-secondary rounded-3 px-3 py-2 flex-fill" data-bs-dismiss="modal">
+                閉じる
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="modal-footer border-top-0 pt-0">
-        <a href="../lessonPage/index.html" target="_blank" class="btn btn-primary rounded-3 px-4">デモサイトを見る</a>
-        <button type="button" class="btn btn-secondary rounded-3" data-bs-dismiss="modal">閉じる</button>
       </div>
     </div>
   </div>
@@ -307,31 +338,53 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body p-4">
-        <div class="row g-4 align-items-center">
+        <div class="row g-4 align-items-start">
           <div class="col-12 col-md-5">
             <img src="images/donuts.png" class="img-fluid rounded-3 w-100 shadow-sm" alt="Donuts" onerror="this.src='https://placehold.co/600x350/e0f2fe/0369a1?text=C.C.Donuts+(PHP)'">
             <div id="ccdonuts" class="languageBar mt-2 mb-2"></div>
-            <div id="ccdonutsLangDetail" class="barCharaArea"></div>
+            <div id="ccdonutsLang" class="langCharaArea row row-cols-2 g-2 m-0"></div>
           </div>
-          <div class="col-12 col-md-7">
-            <p class="mb-2"><strong>区分：</strong> PHP修了課題 (制作期間 2週間)</p>
-            <p class="mb-2"><strong>対応端末：</strong> レスポンシブ対応済（※制作補助としてAIを使用）</p>
-            <p class="mb-2"><strong>内容：</strong> EC風ショッピングサイト機能の構築</p>
-            <p class="mb-2"><strong>工夫した点・こだわり【要差し替え】：</strong><br>
-              <span class="text-danger fw-bold">★★★ 【FIXME: ここに工夫点を記述】 例: ログインセッション管理とDB接続・カート機能のロジック構築。 ★★★</span>
-            </p>
+          <div class="col-12 col-md-7 d-flex flex-column justify-content-between">
+            <div>
+              <p class="mb-2"><strong>制作期間：</strong> 80時間</p>
+              <p class="mb-2"><strong>制作概要：</strong> EC風ショッピングサイト機能の構築 <small class="text-muted">※制作補助としてAIを使用</small></p>
+              <p class="mb-2"><strong>内容：</strong>
+                <span class="text-danger fw-bold">セッション管理とDB接続・カート機能の構築</span>
+              </p>
+            </div>
             <hr class="my-3">
-            <p class="mb-1"><strong>GitHubリンク【要差し替え】：</strong></p>
-            <a href="https://github.com/FIXME_YOUR_ACCOUNT/FIXME_REPO" target="_blank" class="text-break text-danger fw-bold">
-              ★★★ https://github.com/FIXME_YOUR_ACCOUNT/FIXME_REPO ★★★
-            </a>
+            <div class="d-flex flex-column flex-sm-row flex-md-column flex-lg-row gap-2">
+              <a href="https://github.com/gredchilipepperofmarine-create/ccdonuts.git" target="_blank" rel="noopener noreferrer" class="btn btn-light border shadow-sm d-inline-flex align-items-center justify-content-center gap-2 rounded-3 px-3 py-2 flex-fill text-dark text-decoration-none">
+                <img src="images/GitHub_Invertocat_Black.png" alt="GitHub Logo" style="height: 20px; width: auto;">
+                <span class="fw-bold">コードを見る</span>
+              </a>
+              <a href="http://www.gredchilipepper.shop/creates/ccdonuts/index.php" target="_blank" class="btn btn-primary rounded-3 px-3 py-2 flex-fill d-inline-flex align-items-center justify-content-center">
+                サイトを見る
+              </a>
+              <button type="button" class="btn btn-secondary rounded-3 px-3 py-2 flex-fill" data-bs-dismiss="modal">
+                閉じる
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="modal-footer border-top-0 pt-0">
-        <a href="http://www.gredchilipepper.shop/creates/ccdonuts/index.php" target="_blank" class="btn btn-primary rounded-3 px-4">デモサイトを見る</a>
-        <button type="button" class="btn btn-secondary rounded-3" data-bs-dismiss="modal">閉じる</button>
       </div>
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

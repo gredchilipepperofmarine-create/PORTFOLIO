@@ -21,7 +21,7 @@ body {
   background-color: rgba(0, 255, 255, .8);
   background: linear-gradient(rgba(0, 255, 255, .8) 0%, rgba(91, 234, 253, 0.4));
   /* color: #000; */
-  text-shadow: 0 5px 5px rgba(61, 60, 60, .7);
+  /* text-shadow: 0 5px 5px rgba(61, 60, 60, .7); */
   position: relative;
   /* overflow: hidden; */
 }

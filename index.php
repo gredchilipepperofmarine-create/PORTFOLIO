@@ -67,6 +67,10 @@ error_reporting(E_ALL);
           </div>
         </div>
 
+      <!-- get_creates試しエリア -->
+       <?php require 'common/creates/add_input.php'; ?>
+       <?php require 'common/creates/get_creates.php'; ?>
+
         <!-- UFOテックエリア -->
         <div class="mx-auto m-3 bg-white bg-opacity-75 text-center p-3 rounded z-3 shadow-sm" style="max-width: 340px;">
           <div>

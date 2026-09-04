@@ -1,11 +1,9 @@
 <?php
 $category=$title=$description=$dev_time='';
 ?>
-
-
 <div class="container my-3 d-flex justify-content-center">
   <div class="row w-100 justify-content-center">
-    <div class="col-12 col-md-8 col-lg-6">
+    <div class="col-12 col-md-10">
       
       <div class="card border border-secondary-subtle rounded-3 shadow-sm">
         <div class="card-body p-4">

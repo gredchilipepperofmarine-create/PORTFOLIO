@@ -67,10 +67,6 @@ error_reporting(E_ALL);
           </div>
         </div>
 
-      <!-- get_creates試しエリア -->
-       <?php require 'common/creates/add_input.php'; ?>
-       <?php require 'common/creates/get_creates.php'; ?>
-
         <!-- UFOテックエリア -->
         <div class="mx-auto m-3 bg-white bg-opacity-75 text-center p-3 rounded z-3 shadow-sm" style="max-width: 340px;">
           <div>
@@ -184,6 +180,13 @@ error_reporting(E_ALL);
             </div>
           </div>
 
+          <!-- 「体験する」起動ボタン -->
+          <button type="button" class="btn btn-primary btn-lg px-4 py-2 rounded-3 fw-bold shadow-sm" data-bs-toggle="modal" data-bs-target="#experienceModal">
+            <i class="bi bi-play-circle-fill me-2"></i>体験する
+          </button>
+          <!-- 入力モーダル -->
+          <?php require 'common/creates/add_mordal.php'; ?>
+
           <!-- 制作実績エリア -->
           <div id="creates"></div>
           <?php require 'common/getLang/getLang.php'; ?>
@@ -203,11 +206,6 @@ error_reporting(E_ALL);
               </div>
             </div>
           </div> -->
-
-
-  
-
-
 
           <div class="toTopArea">
             <div class="toTopInner">
